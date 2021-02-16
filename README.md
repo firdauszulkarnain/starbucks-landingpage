@@ -1,2 +1,4 @@
-# starbucks-landingpage
-Responsive Starbucks Landing Page 
+# Starbucks Landing Page
+- HTML
+- CSS
+- JavaScript
