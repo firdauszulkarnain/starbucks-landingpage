@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    padding: 50px 100px;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+
+/* Navbar */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 80px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #333;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+
+/* Content */
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .text-box {
+    position: relative;
+    max-width: 650px;
+}
+
+.content .text-box h2 {
+    color: #333;
+    font-size: 3em;
+    line-height: 1.2em;
+    font-weight: 400;
+}
+
+.content .text-box h2 span {
+    color: #017143;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.content .text-box p {
+    color: #333;
+}
+
+.content .text-box a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #017143;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.content .img-box {
+    display: flex;
+    width: 600px;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.content .img-box img {
+    max-width: 320px;
+}
+
+
+/* Footer */
+
+.option {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.option li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.option li:hover {
+    transform: translateY(-15px);
+}
+
+.option li img {
+    max-width: 50px;
+}
+
+
+/* Medsos */
+
+.medsos {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.medsos li {
+    list-style: none;
+}
+
+.medsos li a {
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter: invert(1);
+}
+
+.circle {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #017143;
+    clip-path: circle(600px at right 800px);
+}
+
+@media (min-width: 1200px) {
+    .content .text-box h2 {
+        font-size: 4em;
+    }
+}
+
+@media(max-width: 992px) {
+    header {
+        padding: 20px;
+    }
+    header .logo {
+        max-width: 60px;
+    }
+    header ul {
+        display: none;
+    }
+    .toggle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(../images/menu.png);
+        background-size: 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+        z-index: 11;
+    }
+    .toggle.active {
+        position: fixed;
+        right: 20px;
+        background: url(../images/close.png);
+        background-size: 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    header ul.nav.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        z-index: 10;
+    }
+    header ul li a {
+        font-size: 1.5em;
+        margin: 5px 0px;
+    }
+    section {
+        padding: 20px 20px 120px;
+    }
+    .content {
+        flex-direction: column;
+        margin-top: 150px;
+    }
+    .content .text-box h2 {
+        /* color: #333; */
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+    .content .text-box {
+        max-width: 100%;
+    }
+    .content .img-box {
+        max-width: 100%;
+        justify-content: center;
+    }
+    .content .img-box img {
+        max-width: 300px;
+    }
+    .circle {
+        clip-path: circle(400px at center bottom);
+    }
+    .option li img {
+        max-width: 40px;
+    }
+    .medsos {
+        background: #017143;
+        right: 0;
+        width: 50px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+}
